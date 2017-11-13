@@ -1,0 +1,113 @@
+{
+    "status": "OK", 
+    "logging_info": {
+        "query_geographic_location": "US", 
+        "experiment_id": []
+    }, 
+    "results": [
+        {
+            "rating": 4.3, 
+            "name": "Whole Foods Market", 
+            "reference": "CmRSAAAA6fbS7H-pHyOLTNCWZK2X29vL6m4cx_-cHUXvHkg2--5_o4w83QsGvO0sS1XEYR5k1DXOxWqJw73E65nBP-O1PFWHUrUPoBbzvQfKzvPxAb8EMErT4GlBlCuRRysPdTz1EhBulkdoY8PavXOaYCR0DqmTGhQFQ1j4K_PFeY8EwYeesCr0TGK16w", 
+            "price_level": 3, 
+            "geometry": {
+                "location": {
+                    "lat": 37.7057644, 
+                    "lng": -121.8898424
+                }, 
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.7069589802915, 
+                        "lng": -121.8885032697085
+                    }, 
+                    "southwest": {
+                        "lat": 37.7042610197085, 
+                        "lng": -121.8912012302915
+                    }
+                }
+            }, 
+            "opening_hours": {
+                "weekday_text": [], 
+                "open_now": true
+            }, 
+            "place_id": "ChIJ5yHYk7Luj4ARAMr3kBD9TOc", 
+            "vicinity": "5200 Dublin Boulevard, Dublin", 
+            "photos": [
+                {
+                    "photo_reference": "CmRaAAAA-KozACdHJWGmMW8_C39yhjSa1JY1X4Hwh3XIO1R38EJ4LFkXaa1S1fSNzEByIqvMw8UrBVBoePdBhKx1BALXIqJsNRI1Srbgl0j6mJqTjGxLVlBcHJ_nTOvG0IBwb8gDEhBCfIPiBq5JrdJiroQHkfP0GhQlyovkm9zCM522ITJ1EpSNqeV4ng", 
+                    "width": 3264, 
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108453675463629554167/photos\">Karen V Chin</a>"
+                    ], 
+                    "height": 2448
+                }
+            ], 
+            "scope": "GOOGLE", 
+            "id": "d963589588591a13b46d7eb9b1b3b9fd3989f56d", 
+            "types": [
+                "grocery_or_supermarket", 
+                "supermarket", 
+                "health", 
+                "food", 
+                "store", 
+                "point_of_interest", 
+                "establishment"
+            ], 
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png"
+        }, 
+        {
+            "rating": 4.3, 
+            "name": "Whole Foods Market", 
+            "reference": "CmRRAAAAK7N2VKBVoJ_UuICaVsoXH9SaRYezeCn1Nnhx28JkATI67xfThl8pbwigqVmfsO5w6pF63jfYzlc1986_1rc6VmHmDLKH_dBdPwk9HbC9lbmXUFeYJ1TDxuJUHBYMkqbhEhAWLreoDhub3q30XWbAhsidGhTlszLAsZujZ333Z7ggzEi6ZSez2A", 
+            "price_level": 3, 
+            "geometry": {
+                "location": {
+                    "lat": 37.7617617, 
+                    "lng": -121.9613286
+                }, 
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.7632440802915, 
+                        "lng": -121.9596572697085
+                    }, 
+                    "southwest": {
+                        "lat": 37.7605461197085, 
+                        "lng": -121.9623552302915
+                    }
+                }
+            }, 
+            "opening_hours": {
+                "weekday_text": [], 
+                "open_now": true
+            }, 
+            "place_id": "ChIJ03riW5zyj4ARqJGHiXkY9Ak", 
+            "vicinity": "100 Sunset Drive, San Ramon", 
+            "photos": [
+                {
+                    "photo_reference": "CmRaAAAAMDKtHe3-RhPfAY0CFGoxwzvoEn8tKcYQdMxt4E7hbTkFvGLyVY5MMQ0_uPDYubv5RKVQl7ztyIGQ27qRA1wu9P5awlVG7RCYNvla_MTJybIJJmudKKsVX1mN43SpcT27EhDdIKtJ0_DTJbX-nZmXHRvMGhTNN1kZvel96noQg0dMNUNrllezRg", 
+                    "width": 3024, 
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112354467176355201651/photos\">Juncheng Qian</a>"
+                    ], 
+                    "height": 4032
+                }
+            ], 
+            "scope": "GOOGLE", 
+            "id": "d0c78a767584c72890abc8a1b81be0ad183f13d1", 
+            "types": [
+                "grocery_or_supermarket", 
+                "supermarket", 
+                "health", 
+                "food", 
+                "store", 
+                "point_of_interest", 
+                "establishment"
+            ], 
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png"
+        }
+    ], 
+    "html_attributions": [], 
+    "debug_log": {
+        "line": []
+    }
+}
