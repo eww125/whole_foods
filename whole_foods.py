@@ -14,8 +14,6 @@ f.close()
 print "API_KEY=" + API_KEY
 
 #build the url
-# https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&rankby=distance&types=food&key=YOUR_API_KEY
-# https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.70577,-121.88984&rankby=distance&types=grocery_or_supermarket&name=%27Whole%20Foods%20Market%27&key=AIzaSyBhvACGHMTdRLviYPASd13hZ-0J6Lvm1vM
 url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='
 url += '37.70577,-121.88984'
 url += '&rankby=distance&types=grocery_or_supermarket&name=%27Whole%20Foods%20Market%27&key='
@@ -44,7 +42,7 @@ for x in range (len(json_obj['results'])):
     store_lon = json_obj['results'][x]['geometry']['location']['lng']
     store_list.append([store_name, store_address, store_lat, store_lon])
 
-
+print store_list
 
 """
 # convert to point
