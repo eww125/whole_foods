@@ -1,6 +1,5 @@
-dublin_whole_foods = [37.70577, -121.88984]
-van_ness_socal = [33.974876, -118.318013]
-
+import pandas as pd
+import csv
 from urllib2 import urlopen
 from json import load, dumps
 from time import time
@@ -15,9 +14,22 @@ API_KEY = f.read().rstrip()
 f.close()
 print "API_KEY=" + API_KEY
 
+#possible hub locations
+#hub_location = ['santa_monica', 34.021944, -118.481389]
+#hub_location = ['dublin', 37.70577, -121.88984]
+#hub_location = ['long_beach', 33.768333, -118.195556]
+hub_location = ['pasadena', 34.156111, -118.131944]
+
+# write hub centroid to csv
+with open(hub_location[0] + '_hub.csv', 'wb') as myfile:
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerow(['hub_id', 'lat', 'lon'])
+    wr.writerow(hub_location)
+
+
 #build the url
 url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='
-url += '33.974876,-118.318013'
+url += str(hub_location[1]) + ',' + str(hub_location[2])
 url += '&rankby=distance&types=grocery_or_supermarket&name=%27Whole%20Foods%20Market%27&key='
 url += API_KEY
 print "url="
@@ -43,41 +55,15 @@ for x in range (len(json_obj['results'])):
     lat = json_obj['results'][x]['geometry']['location']['lat']
     # extract lon
     lon = json_obj['results'][x]['geometry']['location']['lng']
-    store_list.append([name, address, lat, lon])
+    store_list.append([hub_location[0], name, address, lat, lon])
 
 print store_list
 
-# write to csv
-import pandas as pd
+# write spokes to csv
 df = pd.DataFrame(store_list)
-df.columns = ['name', 'address', 'lat', 'lon']
+df.columns = ['hub_id', 'name', 'address', 'lat', 'lon']
 print df
-df.to_csv('whole_foods.csv', index=False)
-"""
-import csv
+df.to_csv(hub_location[0] + '_spokes.csv', index=False)
 
-# Read in raw data from csv
-rawData = csv.reader(open('whole_foods.csv', 'rb'), dialect='excel')
-
-coordinate_list=[]
-# loop through the csv by row skipping the first
-iter = 0
-for row in rawData:
-    iter += 1
-    if iter >= 2:
-        lat = row[0]
-        lon = row[1]
-        coordinate_list.append("[" + lon + ", " + lat + "]")
-
-final_string = '{"type":"Point","coordinates":['
-final_string += ",".join(str(x) for x in coordinate_list)
-final_string += "]}"
-print final_string
-
-# opens an geoJSON file to write the output to
-outFileHandle = open('whole_foods' + '.geojson', 'w')
-outFileHandle.write(final_string)
-outFileHandle.close()
-"""
 print "complete!"
 print "Time elapsed: " + str(time() - t) + " s."
